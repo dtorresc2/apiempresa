@@ -7,11 +7,11 @@ const dotenv = require('dotenv');
 const envFile = "./src/config/.env";
 dotenv.config({ path: envFile });
 
-dotenv.config();
+// dotenv.config();
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', (req, res) => {
-  res.send(`Variable de entorno ${process.env.DB_HOST}`);
+  res.send(`Variable de entorno ${process.env.DB_NAME}`);
 })
 
 app.listen(app.get('port'), () => {
